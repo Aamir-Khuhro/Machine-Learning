@@ -34,3 +34,11 @@ for i,j in zip(x,y):
     n1 += (y_pred(i) - y_mean) ** 2
     d1 += (j - y_mean) ** 2   
 r2_score = n1 / d1
+
+# plotting 
+import matplotlib.pyplot as plt
+plt.scatter(x,y)
+def y_pred(x):
+   return m*x+c
+mymodel = list(map(y_pred, x))
+plt.plot(x, mymodel)
